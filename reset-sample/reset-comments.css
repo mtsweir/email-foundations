@@ -1,0 +1,130 @@
+/*  ==========================================================================
+    Reset
+    ========================================================================== */
+
+/**
+    * Normalize padding and margin
+    * 1. Capitalize margin to work for Outlook.com
+    * 2. Prevent text resizing on iOS/OSX
+    * 3. Prevent text resizing on Windows Mobile
+*/
+
+body {
+    margin:0;
+    Margin:0; /* 1 */
+    padding:0;
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 3 */
+}
+
+/**
+    * <hX> colour override
+    * 1. Prevents default green colour added to header tags below h1 in Outlook.com / Hotmail
+*/
+
+h2 {
+    color:#0066CC #important; /* 1 */
+}
+
+/**
+    * <table> element reset
+    * 1. Ensures image resizing and fluid images look better in Outlook 2007 / 2010 / 2013
+*/
+
+img {
+    border:0 none;
+    height:auto;
+    line-height:100%;
+    outline:none;
+    text-decoration:none;
+    -ms-interpolation-mode:bicubic; /* 1 */
+}
+
+a img {
+    border:0 none;
+}
+
+/**
+    * <table> element spacing
+    * 1. Removes spacing left and right of tables in Outlook 2007 / 2010 / 2013
+*/
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    mso-table-lspace:0pt; /* 1 */
+    mso-table-rspace:0pt; /* 1 */
+}
+
+table, td {
+    border-collapse:collapse !important;
+}
+
+table, tr, td {
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*  ==========================================================================
+    Outlook.com / Hotmail
+    ========================================================================== */
+
+/**
+    * Normalize styles appended with the .ExternalClass rule
+*/
+
+.ExternalClass{
+    width:100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+    line-height: 100%;
+}
+
+/*  ==========================================================================
+    Outlook 2007 / 2010 / 2013
+    ========================================================================== */
+
+/**
+    * Trigger the appearance of 'View this email in your browser' link
+    * 1. Allow users to view email in a browser
+*/
+
+#outlook a {
+    padding:0; /* 1 */
+}
+
+/*  ==========================================================================
+    Mailchimp
+    ========================================================================== */
+
+/**
+ * #bodyTable Reset
+ * Fallback for Gmail since the body element is stripped from emails
+ * Use a table to clone the <body> element
+ * 1. Capitalize margin to work for Outlook.com
+*/
+
+#bodyTable {
+    margin:0;
+    Margin: 0; /* 1 */
+    padding:0;
+    line-height: 100% !important;
+    width:100% !important;
+    height:100% !important;
+}
+
+/**
+ * Image spacing
+ * Remove spacing below images, ideal for tiling images
+*/
+
+.imageFix {
+    display:block;
+}
